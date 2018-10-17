@@ -5,7 +5,7 @@ let question1 = {
     answer2: "1996",
     answer3: "1998",
     answer4:"2000",
-    correctAnswer: answer2,
+    correctAnswer: "1996",
 }
 
 let question2 = {
@@ -15,7 +15,7 @@ let question2 = {
     answer2: "Wii Sports",
     answer3: "Grand Theft Auto V",
     answer4: "Minecraft",
-    correctAnswer: this.answer1,
+    correctAnswer: "Tetris",
 }
 
 let question3 = {
@@ -25,7 +25,7 @@ let question3 = {
     answer2: "Nintendo Game Boy",
     answer3: "Xbox 360",
     answer4: "Playstation 2",
-    correctAnswer: this.answer4,
+    correctAnswer: "Playstation 2",
 }
 
 let question4 = {
@@ -35,7 +35,7 @@ let question4 = {
     answer2: "Collect the Chaos Emeralds and defeat Eggman",
     answer3: "Compete in the Summer Olympic Games",
     answer4: "Fight in a tournament in Soul Caliber V",
-    correctAnswer: this.answer3,
+    correctAnswer: "Compete in the Summer Olympic Games",
 }
 
 let question5 = {
@@ -45,7 +45,7 @@ let question5 = {
     answer2: "Simon Belmont from Castlevania",
     answer3: "King K. Rool from Donkey Kong",
     answer4: "Ridley from Metroid",
-    correctAnswer: this.answer4,
+    correctAnswer: "Ridley from Metroid",
 }
 
 let question6 = {
@@ -55,7 +55,7 @@ let question6 = {
     answer2: "Gordon Freeman",
     answer3: "Chel",
     answer4: "Claude",
-    correctAnswer: this.answer2,
+    correctAnswer: "Gordon Freeman",
 }
 
 let question7 = {
@@ -65,7 +65,7 @@ let question7 = {
     answer2: "DOOM",
     answer3: "Quake",
     answer4: "Duke Nukem 3D",
-    correctAnswer: this.answer2,
+    correctAnswer: "DOOM",
 }
 
 let question8 = {
@@ -75,7 +75,7 @@ let question8 = {
     answer2: "Exact, Excersise, Extrude, Excite",
     answer3: "Explore, Expand, Eploit, Exterminate",
     answer4: "Extrapolate, Expose, Explain, Exit",
-    correctAnswer: this.answer3,
+    correctAnswer: "Explore, Expand, Eploit, Exterminate",
 }
 
 let question9 = {
@@ -85,7 +85,7 @@ let question9 = {
     answer2: "A video game console",
     answer3: "An internet router",
     answer4: "A computer",
-    correctAnswer: this.answer1,
+    correctAnswer: "A Blu-Ray player",
 }
 
 let question10 = {
@@ -95,7 +95,7 @@ let question10 = {
     answer2: "System Shock",
     answer3: "The Evil Within",
     answer4: "Resident Evil",
-    correctAnswer: this.answer4,
+    correctAnswer: "Resident Evil",
 }
 
 let questions = [];
@@ -103,3 +103,5 @@ let questions = [];
 questions.push(question1,  question2,  question3,  question4,  question5,  question6,  question7,  question8,  question9, question10 );
 
 console.log(questions);
+
+console.log(JSON.stringify(questions))
