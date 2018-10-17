@@ -97,57 +97,7 @@ let questions = [
         correctAnswer: "Resident Evil",
         funFact: "At the time Capcom wanted to register a Trademark for 'BioHazard' in the United States, there was already another very small, unsuccessful DOS based game named BioHazard."
     }]
-let i = 0;
 
-let time;
-
-function nextQuestion() {
-    i++;
-    clearTimeout(time);
-}
-
-function answerCheck() {
-    let answer;
-    answer = $(this).text();
-    console.log(answer);
-
-    if (questions[i].correctAnswer == answer) {
-        console.log("correct");
-        if (i < 10) {
-            nextQuestion;
-        }
-    }
-
-    else {
-        console.log("incorrect");
-        if (i < 10) {
-            nextQuestion;
-        }
-    }
-}
-
-function start() {
-    time = setTimeout(function timer() {
-        let i = 0
-        console.log(i);
-        $("#welcome").text("");
-        $("#questionSpace").text(questions[i].question)
-        $("#answer1").text(questions[i].answer1);
-        $("#answer2").text(questions[i].answer2);
-        $("#answer3").text(questions[i].answer3);
-        $("#answer4").text(questions[i].answer4);
-
-        $(".answerButton").click(answerCheck)
-
-        30000
-    })
-
-    $("#welcome").text("Out of time!")
-
-    if (i < 10) {
-        start;
-    }
-}
 
 
 $(document).ready(
