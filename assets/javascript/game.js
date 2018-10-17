@@ -6,6 +6,7 @@ let questions = [
         answer3: "1998",
         answer4: "2000",
         correctAnswer: "1996",
+        gif: "https://gfycat.com/gifs/detail/OldfashionedSlimLeveret",
         funFact: "With the latest Generation of Pokemon in Pokemon Sun and Moon, there are now 807 unique Pokemon"
     },
 
@@ -98,9 +99,121 @@ let questions = [
         funFact: "At the time Capcom wanted to register a Trademark for 'BioHazard' in the United States, there was already another very small, unsuccessful DOS based game named BioHazard."
     }]
 
+let i = 0;
+let answer;
+let numberCorrect = 0;
+let t = 30;
+let timer;
+let gradeVal;
 
+function endQuestionTimer() {
+    setTimeout(nextQuestion, 7500);
+}
+
+function timerFunction() {
+    t--;
+    console.log(t)
+    if (t === 0) {
+        $("#welcome").text("Out of Time!");
+        $("#questionSpace").text("")
+        $(".answerButton").hide();
+        $("#answer").text("The answer was: " + questions[i].correctAnswer);
+        $("#funFact").text("Fun Fact: " + questions[i].funFact);
+        clearInterval(timer);
+        iterate();
+    }
+}
+
+function nextQuestion() {
+    t = 30;
+    timer = setInterval(timerFunction, 1000)
+    $("#answer").text("");
+    $("#funFact").text("");
+    $(".answerButton").show()
+    $("#welcome").text("Question" + " " + (i + 1));
+    $("#questionSpace").text(questions[i].question);
+    $("#answer1").text(questions[i].answer1);
+    $("#answer2").text(questions[i].answer2);
+    $("#answer3").text(questions[i].answer3);
+    $("#answer4").text(questions[i].answer4);
+    console.log(i);
+}
+
+function start() {
+    $("#startButton").hide();
+    $(".answerButton").show();
+    nextQuestion();
+}
+
+function finish() {
+    $("#welcome").text("Finished!")
+    $("#answer").text("");
+    $("#funFact").text("");
+    $(".answerButton").hide()
+    $("#questionSpace").text("You got: " + numberCorrect + "correct!")
+    clearInterval(timer);
+
+}
+
+function iterate() {
+    clearInterval(timer);
+    i++;
+    console.log(i)
+    endQuestionTimer();
+}
+
+function grade(){
+    if (numberCorrect<5){
+        gradeVal = "You Failed! But you'll get 'em next time!"
+    }
+
+    if (5<numberCorrect>8){
+        gradeVal = "You're pretty good! Could be better though."
+    }
+}
+
+function answerCheck() {
+    answer = $(this).text()
+
+
+    if (answer === questions[i].correctAnswer) {
+        $("#welcome").text("Correct!");
+        $("#questionSpace").text("");
+        $(".answerButton").hide();
+        $("#funFact").text("Fun Fact: " + questions[i].funFact);
+        console.log("correct")
+        numberCorrect++;
+        if (i < 9) {
+            iterate()
+        }
+
+        else {
+            setTimeout(finish, 7500);
+        }
+    }
+
+    else {
+        console.log("incorrect")
+        if (i < 9) {
+            $("#welcome").text("Incorrect!");
+            $("#questionSpace").text("");
+            $(".answerButton").hide();
+            $("#answer").text("The answer was: " + questions[i].correctAnswer);
+            $("#funFact").text("Fun Fact: " + questions[i].funFact);
+            iterate();
+        }
+
+        else {
+            $("#answer").text("The answer was: " + questions[i].correctAnswer);
+            $("#funFact").text("Fun Fact: " + questions[i].funFact);
+            setTimeout(finish, 7500);
+        }
+    }
+}
 
 $(document).ready(
 
-    $("#startButton").click(start));
+    $("#startButton").click(start),
+    $(".answerButton").click(answerCheck),
+)
 
