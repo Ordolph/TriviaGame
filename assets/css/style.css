@@ -25,3 +25,8 @@ p {
 .lead {
     font-weight: bolder;
 }
+
+.btn-success {
+    height: 100px;
+    width: 200px;
+}

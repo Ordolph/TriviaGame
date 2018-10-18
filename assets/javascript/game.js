@@ -200,7 +200,7 @@ function finish() {
     $("#answer").text("");
     $("#funFact").text("");
     $(".answerButton").hide()
-    $("#questionSpace").text("You got: " + numberCorrect + " correct!")
+    $("#answer").text("You got: " + numberCorrect + " correct!")
     $("#questionSpace").text(gradeVal);
     $("#gifSpot").attr("src", img)
 }
