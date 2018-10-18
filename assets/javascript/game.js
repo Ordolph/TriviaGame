@@ -44,7 +44,7 @@ let questions = [
         answer4: "Fight in a tournament in Soul Caliber V",
         correctAnswer: "Compete in the Summer Olympic Games",
         gif: "assets/images/Mario&Sonic.webm",
-        soundClip: "assets/sounds/Sonic.mp3",
+        soundClip: "assets/sounds/sonic.mp3",
         funFact: "Nintendo and Sega had a longstanding rivalry, being the top console and video game makers of the 90's. This brought about Sega's famous slogan 'Genesis does what Nintendon't'."
     },
     {
