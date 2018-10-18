@@ -15,12 +15,13 @@
 <body>
     <!-- Bootstrap container -->
     <div class="container">
+        <div class="header row"></div>
         <!-- Main game display -->
         <div class="jumbotron">
             <!-- Space for questions and other text -->
             <div class="row">
                 <div class="col-md-12 d-flex justify-content-center">
-                    <h1 class="display-4" id="welcome">Welcome!</h1>
+                    <h1 class="display-4 lead" id="welcome">Welcome!</h1>
                     <br><br>
                 </div>
             </div>
@@ -41,25 +42,30 @@
                     <p class="lead" id="funFact"></p>
                 </div>
             </div>
-        
 
-
-        <!-- Buttons -->
-        <button class="answerButton" id="answer1">A</button>
-        <br><br>
-        <button class="answerButton" id="answer2">B</button>
-        <br><br>
-        <button class="answerButton" id="answer3">C</button>
-        <br><br>
-        <button class="answerButton" id="answer4">D</button>
-        <br><br>
-        <button id="startButton">Start</button>
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-center">
+                    <video id="gifSpot" autoplay loop width="100%">
+                    </video>
+                </div>
+            </div>
+            <!-- Buttons -->
+            <button class="answerButton btn btn-warning" id="answer1">A</button>
+            <br><br>
+            <button class="answerButton btn btn-warning" id="answer2">B</button>
+            <br><br>
+            <button class="answerButton btn btn-warning" id="answer3">C</button>
+            <br><br>
+            <button class="answerButton btn btn-warning" id="answer4">D</button>
+            <br><br>
+            <button id="startButton" class="btn btn-success">Start</button>
         </div>
     </div>
 
     </div>
     </div>
 </body>
+<audio></audio>
 <!-- JQuery cdn -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 

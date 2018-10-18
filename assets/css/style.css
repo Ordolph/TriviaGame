@@ -1,3 +1,27 @@
+body {
+    background-image: url("../images/background.png")
+}
+
 .answerButton {
     display: none;
+}
+
+.header{
+    padding: 5%;
+}
+
+.btn-warning {
+    background-color: orange;
+}
+
+.jumbotron{
+    background-color: lightskyblue;
+}
+
+p {
+    font-weight: bold;
+}
+
+.lead {
+    font-weight: bolder;
 }
