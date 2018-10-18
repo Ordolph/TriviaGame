@@ -12,10 +12,12 @@ body {
 
 .btn-warning {
     background-color: orange;
+    font-weight: bold
 }
 
 .jumbotron{
     background-color: lightskyblue;
+    box-shadow: 3px 5px 5px gray;
 }
 
 p {
@@ -29,4 +31,9 @@ p {
 .btn-success {
     height: 100px;
     width: 200px;
+    font-size: 20pt;
+}
+
+.btn {
+    box-shadow: 3px 5px 5px rgb(79, 102, 110)
 }
